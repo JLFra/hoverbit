@@ -48,10 +48,12 @@ namespace hoverbit {
         }  
     }
 
-    //% block="Gonfler la jupe"
+    //% block="Gonfler la jupe || %puissance"
     //% group='Débutant'
-    export function gonflage_jupe(): void {
-        pins.servoWritePin(AnalogPin.P1, 600);
+    //% puissance.defl=400
+    //% expandableArgumentMode="enabled"
+    export function gonflage_jupe(puissance: number): void {
+        pins.servoWritePin(AnalogPin.P1, puissance);
     }
 
     //% block="Degonfler la jupe"
