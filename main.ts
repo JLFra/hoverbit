@@ -108,7 +108,7 @@ namespace hoverbit {
      * On utilise par défaut le moteur M0
      */
     //% blockID=hoverbit_puissance_moteur_simple
-    //% block="Propulsion moteur puissane $puissance"
+    //% block="Propulsion moteur puissance $puissance"
     //% puissance.defl=0
     //% group='Débutant'
     export function puissance_moteur_simple(puissance: number): void {
