@@ -52,7 +52,7 @@ namespace hoverbit {
     //% group='Débutant'
     //% puissance.defl=400
     //% duration.shadow=timePicker
-    //% expandableArgumentMode="enabled"
+    //% expandableArgumentMode="toggle"
     export function gonflage_jupe(puissance?: number) {
         pins.servoWritePin(AnalogPin.P1, puissance);
     }
