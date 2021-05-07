@@ -50,15 +50,14 @@ namespace hoverbit {
 
     /**
      * Permet de gonfler la Jupe
-     * @param puissance,
-     *      La puissance est réglée par défaut à 50%
-     *      Le moteur de la jupe est connecté par défaut sur le port P1
+     * La puissance est réglée par défaut à 50%
+     * Le moteur de la jupe est connecté par défaut sur le port P1
      */
     //% block="Gonfler la jupe || %puissance"
     //% group='Débutant'
     //% puissance.defl=400
     //% duration.shadow=timePicker
-    //% expandableArgumentMode="toggle"
+    //% expandableArgumentMode=toggle
     export function gonflage_jupe(puissance: number) {
         pins.servoWritePin(AnalogPin.P1, puissance);
     }
