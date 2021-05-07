@@ -9,10 +9,10 @@ enum list_motor {
 
 //% color="#037268" icon="\uf335"
 namespace hoverbit {
-    //% block="Moteur=$name_motor puissance=$power"
+    //% block="Moteur $name_motor puissance $power"
     //% power.min=0 power.max=100
     //% power.defl=0
-    //% name_motor="M0"
+    //% name_motor=M0
     export function motor_power(name_motor: list_motor, power: number): void {
         let rate = power*1023/100;
         switch (name_motor) {
