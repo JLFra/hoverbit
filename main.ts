@@ -52,13 +52,13 @@ namespace hoverbit {
 
     /**
      * Permet de gonfler la Jupe
-     * La puissance est réglée par défaut à 50% (0-100%)
+     * La puissance est réglée par défaut à 10% (0-100%)
      * Le moteur de la jupe est connecté par défaut sur le port P1
      */
     //% blockID=hoverbit_gonflage_jupe
     //% block="Gonfler la jupe || à la puissance %puissance"
     //% group='Débutant'
-    //% puissance.defl=50
+    //% puissance.defl=10
     //% puissance.min=0 puissance.max=100
     //% expandableArgumentMode=toggle
     export function gonflage_jupe(puissance: number): void {
