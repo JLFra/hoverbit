@@ -51,8 +51,9 @@ namespace hoverbit {
     //% block="Gonfler la jupe || %puissance"
     //% group='Débutant'
     //% puissance.defl=400
+    //% duration.shadow=timePicker
     //% expandableArgumentMode="enabled"
-    export function gonflage_jupe(puissance: number): void {
+    export function gonflage_jupe(puissance?: number): void {
         pins.servoWritePin(AnalogPin.P1, puissance);
     }
 
