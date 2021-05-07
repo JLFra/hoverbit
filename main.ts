@@ -7,7 +7,7 @@ enum list_motor {
     M2
 }
 
-//% color="#037268" icon="\uf335"
+//% color="#037268" icon="\u274A"
 namespace hoverbit {
     //% block="Moteur $name_motor puissance $power"
     //% power.min=0 power.max=100
