@@ -7,6 +7,13 @@ enum list_motor {
     M2
 }
 
+enum list_servo {
+    //% block="Servo P1"
+    P1,
+    //% block="Servo P1"
+    P2,
+}
+
 //% color="#037268" icon="\u274A"
 namespace hoverbit {
     //% block="Moteur $name_motor puissance $power"
@@ -25,9 +32,17 @@ namespace hoverbit {
         }
     }
 
-    //% block="Servo direction $angle"
+    //% block="Servo $servo_name direction $angle"
     //% angle.min=-45 angle.max=45
     //% angle.defl=0
-    export function direction(angle: number): void {
+    //% servo_name.defl=P1
+    export function direction(angle: number, servo_name: list_servo): void {
+        angle = angle +90;
+        switch (servo_name) {
+            case list_servo.P1:
+                pins.servoWritePin(AnalogPin.P1, angle);
+            case list_servo.P1:
+                pins.servoWritePin(AnalogPin.P2, angle); 
+        }  
     }
 }
