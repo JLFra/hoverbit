@@ -10,7 +10,7 @@ enum list_motor {
 enum list_servo {
     //% block="Servo P1"
     P1,
-    //% block="Servo P1"
+    //% block="Servo P2"
     P2,
 }
 
