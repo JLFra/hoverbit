@@ -56,10 +56,9 @@ namespace hoverbit {
      * Le moteur de la jupe est connecté par défaut sur le port P1
      */
     //% blockID=hoverbit_gonflage_jupe
-    //% block="Gonfler la jupe || %puissance"
+    //% block="Gonfler la jupe || à la puissance %puissance"
     //% group='Débutant'
     //% puissance.defl=400
-    //% duration.shadow=timePicker
     //% expandableArgumentMode=toggle
     export function gonflage_jupe(puissance: number): void {
         pins.servoWritePin(AnalogPin.P1, puissance);
