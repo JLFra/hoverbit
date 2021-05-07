@@ -9,7 +9,7 @@ enum list_motor {
 
 //% color="#037268" icon="\uf335"
 namespace hoverbit {
-    //% block="Moteur puissance=$power moteur=$name_motor"
+    //% block="Moteur=$name_motor puissance=$power"
     //% power.min=0 power.max=100
     //% power.defl=0
     //% name_motor="M0"
