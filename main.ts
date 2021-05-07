@@ -13,13 +13,14 @@ enum list_servo {
     //% block="P2"
     P2,
 }
-
+//% groups=['Debutant', 'Avancé']
 //% color="#037268" icon="\u274A"
 namespace hoverbit {
     //% block="Moteur $name_motor puissance $power"
     //% power.min=0 power.max=100
     //% power.defl=0
     //% name_motor=M0
+    //% group='Avancé'
     export function motor_power(name_motor: list_motor, power: number): void {
         let rate = power*1023/100;
         switch (name_motor) {
@@ -36,6 +37,7 @@ namespace hoverbit {
     //% angle.min=-45 angle.max=45
     //% angle.defl=0
     //% servo_name.defl=P1
+    //% group='Debutant'
     export function direction(angle: number, servo_name: list_servo): void {
         angle = angle +90;
         switch (servo_name) {
@@ -45,4 +47,25 @@ namespace hoverbit {
                 pins.servoWritePin(AnalogPin.P2, angle); 
         }  
     }
+
+    //% block="Gonfler la jupe"
+    //% group='Debutant'
+    export function gonflage_jupe(): void {
+        pins.servoWritePin(AnalogPin.P1, 600);
+    }
+
+    //% block="Degonfler la jupe"
+    //% group='Debutant'
+    export function degonflage_jupe(): void {
+        pins.servoWritePin(AnalogPin.P1, 0);
+    }
+
+    //% block="Arrêt de tous les moteurs"
+    //% group='Debutant'
+    export function arret_moteurs(): void {
+        pins.servoWritePin(AnalogPin.P0, 0);
+        pins.servoWritePin(AnalogPin.P1, 0);
+        pins.servoWritePin(AnalogPin.P2, 0);
+    }
+
 }
