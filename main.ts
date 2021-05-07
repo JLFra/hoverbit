@@ -24,4 +24,10 @@ namespace hoverbit {
                 pins.analogWritePin(AnalogPin.P2, rate);
         }
     }
+
+    //% block="Servo direction $angle"
+    //% angle.min=-45 angle.max=45
+    //% angle.defl=0
+    export function direction(angle: number): void {
+    }
 }
