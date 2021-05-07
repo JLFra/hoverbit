@@ -74,6 +74,13 @@ namespace hoverbit {
     //% group='Débutant'
     export function direction_simple(angle: number): void {
         angle = angle +90;
-        pins.servoWritePin(AnalogPin.P1, angle);
+        pins.servoWritePin(AnalogPin.P2, angle);
+    }
+
+    //% block="Propulsion moteur puissane $puissance"
+    //% puissance.defl=0
+    //% group='Débutant'
+    export function puissance_moteur_simple(puissance: number): void {
+        pins.servoWritePin(AnalogPin.P0, puissance);
     }
 }
