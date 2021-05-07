@@ -52,7 +52,7 @@ namespace hoverbit {
 
     /**
      * Permet de gonfler la Jupe
-     * La puissance est réglée par défaut à 50%
+     * La puissance est réglée par défaut à 50% (0-100%)
      * Le moteur de la jupe est connecté par défaut sur le port P1
      */
     //% blockID=hoverbit_gonflage_jupe
@@ -62,9 +62,13 @@ namespace hoverbit {
     //% puissance.min=0 puissance.max=100
     //% expandableArgumentMode=toggle
     export function gonflage_jupe(puissance: number): void {
-        pins.servoWritePin(AnalogPin.P1, puissance);
+        pins.servoWritePin(AnalogPin.P1, puissance*1023/100);
     }
 
+    /**
+     * Permet de dégonfler la Jupe
+     * Le moteur de la jupe est connecté par défaut sur le port P1
+     */
     //% blockID=hoverbit_degonflage_jupe
     //% block="Degonfler la jupe"
     //% group='Débutant'
@@ -72,6 +76,10 @@ namespace hoverbit {
         pins.servoWritePin(AnalogPin.P1, 0);
     }
 
+    /**
+     * Permet d'arrêter tous les moteurs jupe et propulsion
+     * Arrêt des moteurs M0, M1 et M2
+     */
     //% blockID=hoverbit_arret_moteurs
     //% block="Arrêt de tous les moteurs"
     //% group='Débutant'
@@ -81,9 +89,13 @@ namespace hoverbit {
         pins.servoWritePin(AnalogPin.P2, 0);
     }
 
+    /**
+     * Permet de positionner la dérive à un angle donné
+     * On utilise par défaut le servo connecté sur P2
+     */
     //% blockID=hoverbit_direction_simple
     //% block="Direction $angle"
-    //% angle.min=-45 angle.max=45
+    //% angle.min=-60 angle.max=60
     //% angle.defl=0
     //% group='Débutant'
     export function direction_simple(angle: number): void {
@@ -91,6 +103,10 @@ namespace hoverbit {
         pins.servoWritePin(AnalogPin.P2, angle);
     }
 
+    /**
+     * Permet régler la puissance du moteur de propulsion
+     * On utilise par défaut le moteur M0
+     */
     //% blockID=hoverbit_puissance_moteur_simple
     //% block="Propulsion moteur puissane $puissance"
     //% puissance.defl=0
