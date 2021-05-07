@@ -16,6 +16,7 @@ enum list_servo {
 //% groups=['Débutant', 'Avancé']
 //% color="#037268" icon="\u274A"
 namespace hoverbit {
+    //% blockID=hoverbit_moteur_power
     //% block="Moteur $name_motor puissance $power"
     //% power.min=0 power.max=100
     //% power.defl=0
@@ -33,6 +34,7 @@ namespace hoverbit {
         }
     }
 
+    //% blockID=hoverbit_direction
     //% block="Servo $servo_name direction $angle"
     //% angle.min=-45 angle.max=45
     //% angle.defl=0
@@ -53,6 +55,7 @@ namespace hoverbit {
      * La puissance est réglée par défaut à 50%
      * Le moteur de la jupe est connecté par défaut sur le port P1
      */
+    //% blockID=hoverbit_gonflage_jupe
     //% block="Gonfler la jupe || %puissance"
     //% group='Débutant'
     //% puissance.defl=400
@@ -62,12 +65,14 @@ namespace hoverbit {
         pins.servoWritePin(AnalogPin.P1, puissance);
     }
 
+    //% blockID=hoverbit_degonflage_jupe
     //% block="Degonfler la jupe"
     //% group='Débutant'
     export function degonflage_jupe(): void {
         pins.servoWritePin(AnalogPin.P1, 0);
     }
 
+    //% blockID=hoverbit_arret_moteurs
     //% block="Arrêt de tous les moteurs"
     //% group='Débutant'
     export function arret_moteurs(): void {
@@ -76,6 +81,7 @@ namespace hoverbit {
         pins.servoWritePin(AnalogPin.P2, 0);
     }
 
+    //% blockID=hoverbit_direction_simple
     //% block="Direction $angle"
     //% angle.min=-45 angle.max=45
     //% angle.defl=0
@@ -85,6 +91,7 @@ namespace hoverbit {
         pins.servoWritePin(AnalogPin.P2, angle);
     }
 
+    //% blockID=hoverbit_puissance_moteur_simple
     //% block="Propulsion moteur puissane $puissance"
     //% puissance.defl=0
     //% group='Débutant'
