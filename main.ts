@@ -56,7 +56,7 @@ namespace hoverbit {
      * Le moteur de la jupe est connecté par défaut sur le port P1
      */
     //% blockID=hoverbit_gonflage_jupe
-    //% block="Gonfler la jupe || à la puissance %puissance"
+    //% block="Gonfler la jupe|| à la puissance %puissance"
     //% group='Avancé'
     //% puissance.defl=10
     //% puissance.min=0 puissance.max=100
