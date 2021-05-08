@@ -61,7 +61,7 @@ namespace hoverbit {
     //% puissance.defl=10
     //% puissance.min=0 puissance.max=100
     //% expandableArgumentMode=toggle
-    export function gonflage_jupe(puissance: number): void {
+    export function gonflage_jupe(puissance?: number): void {
         pins.servoWritePin(AnalogPin.P1, puissance*1023/100);
     }
 
